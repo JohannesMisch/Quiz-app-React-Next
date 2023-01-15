@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "question": "Lorem ipsum?",
+    "answer": "Lorem ipsum!",
+    "isFavorite": false,
+    "tag1": true,
+    "tag2": true,
+    "tag3": true
+  },
+  {
+    "id": 1,
+    "question": "Lorem ipsum?",
+    "answer": "Lorem ipsum!",
+    "isFavorite": false,
+    "tag1": true,
+    "tag2": true,
+    "tag3": true
+  },
+  {
+    "id": 1,
+    "question": "Lorem ipsum?",
+    "answer": "Lorem ipsum!",
+    "isFavorite": true,
+    "tag1": true,
+    "tag2": true,
+    "tag3": true
+  }
+]
