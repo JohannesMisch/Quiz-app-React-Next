@@ -1,18 +1,37 @@
 import Questions from "../../db.json";
+import { useState } from "react";
 export default function Cards() {
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [activeId, setActiveId] = useState();
+
   return (
     <ul>
       {Questions.map((Question) => (
         <li key={Question.id}>
           <h2>{Question.question}</h2>
           <p>{Question.answer}</p>
-          <button>Show Answer</button>
+          <button
+            onClick={() => {
+              setShowAnswer(!showAnswer);
+              setActiveId(Question.id);
+            }}
+          >
+            {showAnswer && activeId === Question.id
+              ? Question.answer
+              : "Show Answer"}
+          </button>
           <ul>
             <li>Tag 1</li>
             <li>Tag 2</li>
             <li>Tag 3</li>
           </ul>
-          <button>{Question.isFavorite ? favoriteFilled : notFavorite}</button>
+          <button
+            onClick={() => {
+              setQuestions();
+            }}
+          >
+            {Question.isFavorite ? favoriteFilled : notFavorite}
+          </button>
         </li>
       ))}
     </ul>
